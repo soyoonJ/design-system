@@ -12,14 +12,14 @@
     "./themes.css": "./dist/themes.css"
   },
   "scripts": {
-    "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
+    "build": "yarn run clean && yarn run build:js && yarn run build:type && yarn run build:css",
     "build:js": "node build.js",
-    "build:type": "tsc --emitDeclarationOnly",
+    "build:type": "yarn tsc --emitDeclarationOnly",
     "build:css": "node ./scripts/build-css-module.js",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "esbuild": "^0.21.2",
+    "@design-system/esbuild-config": "workspace:^",
     "typescript": "^5.4.5"
   }
 }
